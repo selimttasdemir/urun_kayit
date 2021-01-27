@@ -128,8 +128,10 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="handler.ashx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="jssss\sccr.js" />
     <Content Include="listele.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="script.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -159,6 +161,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="style.css" />
     <Content Include="urunEkleme.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
