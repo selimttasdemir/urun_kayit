@@ -15,7 +15,6 @@ namespace urun_kayit
     {
 
         SqlConnection baglanti = new SqlConnection(System.Web.Configuration.WebConfigurationManager.ConnectionStrings["veritabanıBaglantisi"].ConnectionString);
-        SqlCommand komut;
         DataSet ds;
 
 

@@ -8,7 +8,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - ŞekilŞukul.com</title>
-    
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -21,8 +20,7 @@
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
+
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
@@ -35,7 +33,7 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
+
             </Scripts>
         </asp:ScriptManager>
 
@@ -55,6 +53,7 @@
                         <li><a runat="server" href="~/About">Hakkında</a></li>
                         <li><a runat="server" href="~/Contact">İletişim</a></li>
                         <li><a runat="server" href="~/adminGiris">Admin</a></li>
+                        <li><a runat="server" href="~/login">Giriş Yap / Üye Ol</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +62,7 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer style="position: absolute;bottom: 0;text-align:center">
+            <footer style="position: fixed;bottom: 0;text-align:center;margin-top:1024px;width:100%;padding:15px;height:50px">
                 <p>by Selim_TASDEMIR  &copy; <%: DateTime.Now.Year %> - ASP.NET APPLICATION</p>
             </footer>
         </div>

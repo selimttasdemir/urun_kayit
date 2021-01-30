@@ -1,17 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="listele.aspx.cs" Inherits="urun_kayit.listele" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
-
     <asp:Button ID="btnAlisveris" runat="server" Height="80px" OnClick="btnAlisveris_Click" Text="Alışverişe Başla" Width="220px" />
-
-
-<center>
+    <center>
             <p>
             <img alt="" class="auto-style1" src="Resimler/Logo.png" />
             </p>
-                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style2" Width="250px">
-                </asp:DropDownList>
+                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style2" Width="250px"></asp:DropDownList>
                 <asp:Button ID="btnlistele" runat="server" OnClick="btnlistele_Click" Text="Listele" />
             <table style="width: 1200px; height: 200px;">
             <tr>
@@ -38,7 +34,5 @@
             </td>
             </tr>
             </table>
-            </center>
-
-
+    </center>
 </asp:Content>
