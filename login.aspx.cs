@@ -13,7 +13,6 @@ namespace urun_kayit
 {
     public partial class login : System.Web.UI.Page
     {
-
         SqlConnection baglanti = new SqlConnection(System.Web.Configuration.WebConfigurationManager.ConnectionStrings["veritabanıBaglantisi"].ConnectionString);
         DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
@@ -24,7 +23,8 @@ namespace urun_kayit
             }
         }
         string kullaniciad, kullanicisifre, Mkullaniciad, Mkullanicisifre, MkullaniciMail, sorgu;
-        protected void btnKayit_Click1(object sender, EventArgs e)
+
+        protected void btnKayit_Click(object sender, EventArgs e)
         {
             Mkullaniciad = txtKayitAd.Text;
             Mkullanicisifre = txtKayitSifre.Text;
@@ -32,7 +32,7 @@ namespace urun_kayit
             if (MkullaniciMail != "" && Mkullanicisifre != "" && Mkullaniciad != "")
             {
                 SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
-                sorgu = "INSERT INTO tblMusteri(musteriAdi,musteriUser,musteriPasswd) VALUES(@name,@user,@sifre)";
+                sorgu = "insert into tblMusteri (musteriAdi,musteriUser,musteriPasswd) values (@name,@user,@sifre)";
                 SqlCommand komut = new SqlCommand(sorgu, baglanti);
                 ds = new DataSet();
                 komut.Parameters.AddWithValue("@name", Mkullaniciad);

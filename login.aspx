@@ -70,10 +70,9 @@
                                 <span style="padding-left:50px;">Use Your Account<br />
                                 </br></span>
                                 <asp:TextBox  ID="txtKullanici" runat="server" placeholder="E-mail"></asp:TextBox>
-                                <br />
                                 <asp:TextBox ID="txtSifre" runat="server" placeholder="Password" TextMode ="Password"></asp:TextBox>
                                 <br />
-                                <a href="#">Forgot your password?</a><br />
+                                <a href="sifremiUnuttum.aspx">Forgot your password?</a><br />
                                 <asp:Button ID="btnGiris" runat="server" Text="Giriş Yap" CssClass="button" OnClick="btnGiris_Click1"/>
                                 <br />
                             </form>
@@ -94,7 +93,9 @@
                             <br />
                             <asp:TextBox ID="txtKayitSifre" runat="server" placeholder="Password" TextMode ="Password"></asp:TextBox>
                             <br />
-                            <asp:Button ID="btnKayit" runat="server" Text="Kayıt Ol" CssClass="button" OnClick="btnKayit_Click1"/>
+                            <asp:Button ID="btnKayit" runat="server" Text="KAYIT OL" CssClass="button" OnClick="btnKayit_Click" />
+
+                            <br />
                         </form>
                         <br />
                         <asp:Label ID="lblKayitDurum" runat="server"></asp:Label>

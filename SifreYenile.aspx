@@ -1,12 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="sifremiUnuttum.aspx.cs" Inherits="urun_kayit.sifremiUnuttum" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SifreYenile.aspx.cs" Inherits="urun_kayit.SifreYenile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         .button {
             border-radius: 20px;
             border: 1px solid #FF4B2B;
@@ -51,21 +47,17 @@
             width: 200px;
         }
     </style>
-    <center>
-    <div style="width: 600px; height: 450px; background-color: #7accc8">
-        <form action="#" style="background-color: #4aaaa5; height: 450px;">
-            <br />
-            <br />
-            <h1>Şifremi Unuttum</h1>
-            &nbsp;<br />
-            <asp:TextBox ID="txtSifremiUnuttumMail" runat="server" placeholder="E-mail"></asp:TextBox>
-            <br />
-            <asp:TextBox ID="txtSifremiUnuttumTelNo" runat="server" placeholder="Kayıtlı Telefon Numarası"></asp:TextBox>
-            <br />
-            <asp:Button ID="btnSifreYenile" runat="server" Text="GÖNDER" CssClass="button" OnClick="btnSifreYenile_Click1" />
-            <br />
-        </form>
-        <asp:Label ID="lblinfo" runat="server"></asp:Label>
-    </div>
-    </center>
+
+    <form action="#" style="background-color: #4aaaa5; height: 450px;">
+        <h1>Şifre Yenileme</h1>
+        &nbsp;<br />
+        <asp:TextBox ID="txtYeniSifre" runat="server" placeholder="E-mail" TextMode="Password"></asp:TextBox>
+        <br />
+        <asp:TextBox ID="txtYeniSifreTekrar" runat="server" placeholder="Kayıtlı Telefon Numarası" TextMode="Password"></asp:TextBox>
+        <br />
+        <asp:Button ID="btnSifreYenile" runat="server" Text="Şifre Değiştir" CssClass="button" OnClick="btnSifreYenile_Click" />
+
+        <br />
+    </form>
+
 </asp:Content>

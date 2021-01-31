@@ -11,26 +11,26 @@ namespace urun_kayit
 {
 
 
-    public partial class sifremiUnuttum
+    public partial class SifreYenile
     {
 
         /// <summary>
-        /// txtSifremiUnuttumMail control.
+        /// txtYeniSifre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSifremiUnuttumMail;
+        protected global::System.Web.UI.WebControls.TextBox txtYeniSifre;
 
         /// <summary>
-        /// txtSifremiUnuttumTelNo control.
+        /// txtYeniSifreTekrar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSifremiUnuttumTelNo;
+        protected global::System.Web.UI.WebControls.TextBox txtYeniSifreTekrar;
 
         /// <summary>
         /// btnSifreYenile control.
@@ -40,14 +40,5 @@ namespace urun_kayit
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSifreYenile;
-
-        /// <summary>
-        /// lblinfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblinfo;
     }
 }

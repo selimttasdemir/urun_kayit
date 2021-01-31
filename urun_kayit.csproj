@@ -128,9 +128,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="handler.ashx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="lol\login.html" />
-    <Content Include="lol\script.js" />
-    <Content Include="lol\style.css" />
     <Content Include="listele.aspx" />
     <Content Include="login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -162,6 +159,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="sifremiUnuttum.aspx" />
+    <Content Include="SifreYenile.aspx" />
     <Content Include="Site.Master" />
     <Content Include="urunEkleme.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -233,6 +231,13 @@
     </Compile>
     <Compile Include="sifremiUnuttum.aspx.designer.cs">
       <DependentUpon>sifremiUnuttum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SifreYenile.aspx.cs">
+      <DependentUpon>SifreYenile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SifreYenile.aspx.designer.cs">
+      <DependentUpon>SifreYenile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
