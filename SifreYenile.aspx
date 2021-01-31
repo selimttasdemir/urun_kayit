@@ -51,13 +51,15 @@
     <form action="#" style="background-color: #4aaaa5; height: 450px;">
         <h1>Şifre Yenileme</h1>
         &nbsp;<br />
-        <asp:TextBox ID="txtYeniSifre" runat="server" placeholder="E-mail" TextMode="Password"></asp:TextBox>
-        <br />
-        <asp:TextBox ID="txtYeniSifreTekrar" runat="server" placeholder="Kayıtlı Telefon Numarası" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="txtYeniSifre" runat="server" placeholder="Yeni Şifrenizi Girin ..." TextMode="Password"></asp:TextBox>
         <br />
         <asp:Button ID="btnSifreYenile" runat="server" Text="Şifre Değiştir" CssClass="button" OnClick="btnSifreYenile_Click" />
 
         <br />
+        <asp:Label ID="lblDurum" runat="server"></asp:Label>
+        <br />
+        <br />
+        <asp:Label ID="lblDurum0" runat="server" Visible="False"></asp:Label>
     </form>
 
 </asp:Content>

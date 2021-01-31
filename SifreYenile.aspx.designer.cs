@@ -24,15 +24,6 @@ namespace urun_kayit
         protected global::System.Web.UI.WebControls.TextBox txtYeniSifre;
 
         /// <summary>
-        /// txtYeniSifreTekrar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtYeniSifreTekrar;
-
-        /// <summary>
         /// btnSifreYenile control.
         /// </summary>
         /// <remarks>
@@ -40,5 +31,23 @@ namespace urun_kayit
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSifreYenile;
+
+        /// <summary>
+        /// lblDurum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDurum;
+
+        /// <summary>
+        /// lblDurum0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDurum0;
     }
 }

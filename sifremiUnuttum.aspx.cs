@@ -16,10 +16,9 @@ namespace urun_kayit
 
         }
 
+        string sorgu, kullaniciMail, kullaniciNumara;
         protected void btnSifreYenile_Click1(object sender, EventArgs e)
         {
-            string sorgu, kullaniciMail, kullaniciNumara;
-
             kullaniciMail = txtSifremiUnuttumMail.Text;
             kullaniciNumara = txtSifremiUnuttumTelNo.Text;
 
@@ -36,6 +35,8 @@ namespace urun_kayit
                 {
                     if (oku.Read())
                     {
+                        Session["numara"] = kullaniciNumara;
+
                         Session.Add("kullanici", kullaniciMail);
                         Response.Redirect("SifreYenile.aspx");
                     }
@@ -54,6 +55,8 @@ namespace urun_kayit
             {
                 lblinfo.Text = "Girdiler Boş Geçilemez !";
             }
+            
         }
+        
     }
 }

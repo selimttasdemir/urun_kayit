@@ -15,39 +15,39 @@ namespace urun_kayit
     {
 
         /// <summary>
-        /// txtKullanici control.
+        /// txtUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKullanici;
+        protected global::System.Web.UI.WebControls.TextBox txtUserName;
 
         /// <summary>
-        /// txtSifre control.
+        /// txtPasswd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSifre;
+        protected global::System.Web.UI.WebControls.TextBox txtPasswd;
 
         /// <summary>
-        /// btnGiris control.
+        /// btnAdminGiris control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGiris;
+        protected global::System.Web.UI.WebControls.Button btnAdminGiris;
 
         /// <summary>
-        /// lblDurum control.
+        /// lblinfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDurum;
+        protected global::System.Web.UI.WebControls.Label lblinfo;
     }
 }

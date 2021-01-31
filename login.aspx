@@ -81,9 +81,8 @@
                     </center>
 
                     <center>
-                    <td style="width:600px; background-color:#4aaaa5; height:450px;">
+                    <td style="width:600px; padding-left:200px; background-color:#4aaaa5; height:450px;">
                         <br />
-                        <form action="#" style="background-color: #4aaaa5; height:450px;">
                             <h1>Create Account</h1>
                             <span>Use Your E-mail for Registration</span>
                             <br />
@@ -93,10 +92,7 @@
                             <br />
                             <asp:TextBox ID="txtKayitSifre" runat="server" placeholder="Password" TextMode ="Password"></asp:TextBox>
                             <br />
-                            <asp:Button ID="btnKayit" runat="server" Text="KAYIT OL" CssClass="button" OnClick="btnKayit_Click" />
-
-                            <br />
-                        </form>
+                            <asp:Button ID="btnKayit" runat="server" CssClass="button" OnClick="btnKayit_Click1" Text="KAYIT OL" />
                         <br />
                         <asp:Label ID="lblKayitDurum" runat="server"></asp:Label>
                         <br />

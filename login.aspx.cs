@@ -17,36 +17,47 @@ namespace urun_kayit
         DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["kullanici"] != null)
-            {
-                Response.Write("Hoşgeldin " + Session["kullanici"]);
-            }
+            //if (Session["kullanici"] != null)
+            //{
+            //    Response.Write("Hoşgeldin " + Session["kullanici"]);
+            //}
         }
         string kullaniciad, kullanicisifre, Mkullaniciad, Mkullanicisifre, MkullaniciMail, sorgu;
 
-        protected void btnKayit_Click(object sender, EventArgs e)
+        protected void btnKayit_Click1(object sender, EventArgs e)
         {
             Mkullaniciad = txtKayitAd.Text;
             Mkullanicisifre = txtKayitSifre.Text;
             MkullaniciMail = txtKayitMail.Text;
-            if (MkullaniciMail != "" && Mkullanicisifre != "" && Mkullaniciad != "")
+            try
             {
-                SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
-                sorgu = "insert into tblMusteri (musteriAdi,musteriUser,musteriPasswd) values (@name,@user,@sifre)";
-                SqlCommand komut = new SqlCommand(sorgu, baglanti);
-                ds = new DataSet();
-                komut.Parameters.AddWithValue("@name", Mkullaniciad);
-                komut.Parameters.AddWithValue("@user", MkullaniciMail);
-                komut.Parameters.AddWithValue("@sifre", Mkullanicisifre);
-                baglanti.Open();
-                komut.ExecuteNonQuery();
-                lblKayitDurum.Text = "KAYIT BAŞARILI !";
-                baglanti.Close();
+                if (MkullaniciMail != "" && Mkullanicisifre != "" && Mkullaniciad != "")
+                {
+                    SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
+                    sorgu = "insert into tblMusteri (musteriAdi,musteriUser,musteriPasswd) values (@name,@user,@sifre)";
+                    SqlCommand komut = new SqlCommand(sorgu, baglanti);
+                    ds = new DataSet();
+                    komut.Parameters.AddWithValue("@name", Mkullaniciad);
+                    komut.Parameters.AddWithValue("@user", MkullaniciMail);
+                    komut.Parameters.AddWithValue("@sifre", Mkullanicisifre);
+                    baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    lblKayitDurum.Text = "KAYIT BAŞARILI !";
+                    baglanti.Close();
+                }
+                else
+                {
+                    lblKayitDurum.Text = "Kayıt Eklenemedi!!!!";
+                }
             }
-            else
+            catch (Exception)
             {
-                lblKayitDurum.Text = "Kayıt Eklenemedi!!!!";
+                lblKayitDurum.Text = "Başarısız Kayıt !";
             }
+
+
+
+            
         }
 
         protected void btnGiris_Click1(object sender, EventArgs e)

@@ -117,6 +117,32 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="foto\0 %281%29.jpg" />
+    <Content Include="foto\0 %2810%29.jpg" />
+    <Content Include="foto\0 %2811%29.jpg" />
+    <Content Include="foto\0 %2812%29.jpg" />
+    <Content Include="foto\0 %2813%29.jpg" />
+    <Content Include="foto\0 %2814%29.jpg" />
+    <Content Include="foto\0 %2815%29.jpg" />
+    <Content Include="foto\0 %2816%29.jpg" />
+    <Content Include="foto\0 %2817%29.jpg" />
+    <Content Include="foto\0 %2818%29.jpg" />
+    <Content Include="foto\0 %2819%29.jpg" />
+    <Content Include="foto\0 %282%29.jpg" />
+    <Content Include="foto\0 %2820%29.jpg" />
+    <Content Include="foto\0 %2821%29.jpg" />
+    <Content Include="foto\0 %2822%29.jpg" />
+    <Content Include="foto\0 %2823%29.jpg" />
+    <Content Include="foto\0 %2824%29.jpg" />
+    <Content Include="foto\0 %2825%29.jpg" />
+    <Content Include="foto\0 %2826%29.jpg" />
+    <Content Include="foto\0 %283%29.jpg" />
+    <Content Include="foto\0 %284%29.jpg" />
+    <Content Include="foto\0 %285%29.jpg" />
+    <Content Include="foto\0 %286%29.jpg" />
+    <Content Include="foto\0 %287%29.jpg" />
+    <Content Include="foto\0 %288%29.jpg" />
+    <Content Include="foto\0 %289%29.jpg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -162,6 +188,7 @@
     <Content Include="SifreYenile.aspx" />
     <Content Include="Site.Master" />
     <Content Include="urunEkleme.aspx" />
+    <Content Include="urunler.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -252,6 +279,13 @@
     </Compile>
     <Compile Include="urunEkleme.aspx.designer.cs">
       <DependentUpon>urunEkleme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="urunler.aspx.cs">
+      <DependentUpon>urunler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="urunler.aspx.designer.cs">
+      <DependentUpon>urunler.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
