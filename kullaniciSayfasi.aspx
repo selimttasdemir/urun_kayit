@@ -42,6 +42,12 @@
             width: 200px;
             height: 25px;
         }
+        .auto-style1 {
+            width: 278px;
+        }
+        .auto-style2 {
+            width: 280px;
+        }
     </style>
 
 
@@ -53,7 +59,7 @@
                 <center>
                 <td style="width: 525px;background-color:#4aaaa5; position:center;">
                     <div style="padding-left:175px; position:center;">
-                        <h1 style="">Üyelik Bilgilerim</h1>
+                        <h1 class="auto-style2">Üyelik Bilgilerim</h1>
                         <asp:TextBox ID="txtAd" runat="server" Height="25px" Width="180px" placeholder="Adınızı Giriniz ..."></asp:TextBox>
                         <br />
                         <asp:TextBox ID="txtSoyad" runat="server" Height="25px" Width="180px" placeholder="Soyadınızı Giriniz ..."></asp:TextBox>
@@ -65,6 +71,8 @@
                         <asp:TextBox ID="txtTarih" runat="server" Height="25px" Width="180px" placeholder="Doğum Tarihinizi Giriniz ..." TextMode="Date"></asp:TextBox>
                         <br />
                         <asp:Button ID="btnBilgiGuncelle" CssClass="button" runat="server" Height="48px" Text="Güncelle" Width="180px" OnClick="btnBilgiGuncelle_Click" />
+                        <br />
+                        <asp:Label ID="lblDurum" runat="server"></asp:Label>
                     </div>
                 </td>
                 </center>
@@ -72,14 +80,16 @@
                 <td style="width: 525px; background-color:#7accc8; position:center">
                     <div style="padding-left:175px;">
                         <br />
-                        <h1 style="">Şifre Güncelleme</h1>
+                        <h1 class="auto-style1">Şifre Güncelleme</h1>
                         <asp:TextBox ID="txtSifre" runat="server" Height="25px" Width="180px" placeholder="Şu Anki Şifreniz" TextMode="Password"></asp:TextBox>
                         <br />
                         <asp:TextBox ID="txtYeniSifre1" runat="server" Height="25px" Width="180px" placeholder="Yeni Şifre" TextMode="Password"></asp:TextBox>
                         <br />
                         <asp:TextBox ID="txtYeniSifre2" runat="server" Height="25px" Width="180px" placeholder="Yeni Şifre Tekrar" TextMode="Password"></asp:TextBox>
                         <br />
-                        <asp:Button ID="btnSifreGuncelle" CssClass="button" runat="server" Height="48px" Text="Güncelle" Width="180px" />
+                        <asp:Button ID="btnSifreGuncelle" CssClass="button" runat="server" Height="48px" Text="Güncelle" Width="180px" OnClick="btnSifreGuncelle_Click" />
+                        <br />
+                        <asp:Label ID="lblSifreDegistir" runat="server"></asp:Label>
                         <br />
                     </div>
                 </td>

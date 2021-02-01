@@ -3,47 +3,47 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div>
-        <div style="padding-bottom: 25px">
+        <div style="padding-bottom: 25px; background-color: #4aaaa5">
             <table align="center" cellpadding="2" width="300px;">
                 <tr>
-                    <td>
+                    <td style="height: 35px">
                         <asp:Label ID="Label1" runat="server" Text="Ürün ID"></asp:Label>
                     </td>
-                    <td>:
+                    <td style="height: 35px">:
                     </td>
-                    <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style2" Width="190px" Height="16px">
+                    <td style="height: 35px">
+                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style2" Width="190px" Height="20px">
                         </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td style="height: 40px">
                         <asp:Label ID="Label2" runat="server" Text="Ürün Adı"></asp:Label>
                     </td>
-                    <td>:
+                    <td style="height: 40px">:
                     </td>
-                    <td>
-                        <asp:TextBox ID="txtAdi" runat="server"></asp:TextBox>
+                    <td style="height: 40px">
+                        <asp:TextBox ID="txtAdi" runat="server" Height="25px" Width="180px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td style="height: 40px">
                         <asp:Label ID="Label3" runat="server" Text="Fiyat"></asp:Label>
                     </td>
-                    <td>:
+                    <td style="height: 40px">:
                     </td>
-                    <td>
-                        <asp:TextBox ID="txtFiyat" runat="server"></asp:TextBox>
+                    <td style="height: 40px">
+                        <asp:TextBox ID="txtFiyat" runat="server" Height="25px" Width="180px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td style="height: 40px">
                         <asp:Label ID="Label4" runat="server" Text="Adet"></asp:Label>
                     </td>
-                    <td>:
+                    <td style="height: 40px">:
                     </td>
-                    <td>
-                        <asp:TextBox ID="txtAdet" runat="server" CssClass="numericOnly"></asp:TextBox>
+                    <td style="height: 40px">
+                        <asp:TextBox ID="txtAdet" runat="server" CssClass="numericOnly" Height="25px" Width="180px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -54,15 +54,15 @@
                     <td>&nbsp;
                     </td>
                     <td>
-                        <asp:Button ID="btnSepeteEkle" runat="server" Text="Sepete Ekle" OnClick="btnSepeteEkle_Click" />
-                        <asp:Button ID="btnGoster" runat="server" OnClick="btnGoster_Click" Text="Fiyat Gör" />
+                        <asp:Button ID="btnSepeteEkle" runat="server" Text="Sepete Ekle" OnClick="btnSepeteEkle_Click" Height="40px" Width="100px" />
+                        <asp:Button ID="btnGoster" runat="server" OnClick="btnGoster_Click" Text="Fiyat Gör" Height="40px" style="margin-bottom: 9" Width="100px" />
                     </td>
                 </tr>
             </table>
             <asp:DataList ID="DataList1" runat="server" CellPadding="4" OnItemCommand="DataList1_ItemCommand"
                 ForeColor="#333333" BorderColor="Black" BorderWidth="1px" CellSpacing="2" Font-Bold="False"
                 Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"
-                HorizontalAlign="Center" ShowFooter="False">
+                HorizontalAlign="Center" ShowFooter="False" Height="200px" Width="500px">
                 <FooterStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />
                 <AlternatingItemStyle BackColor="White" ForeColor="#284775" />
                 <ItemStyle BackColor="#DEDFDE" ForeColor="Black" />
@@ -112,7 +112,7 @@
                 </ItemTemplate>
             </asp:DataList>
             <br />
-            <center><asp:Label ID="lblToplam" runat="server"></asp:Label></center>
+            <center><asp:Label ID="lblToplam" runat="server" BorderStyle="Solid" style="font-size:15px"></asp:Label></center>
         </div>
     </div>
 
