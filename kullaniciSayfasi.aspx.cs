@@ -7,14 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace urun_kayit
 {
-    public partial class SiteMaster : MasterPage
+    public partial class kullaniciSayfasi : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void ibtnKullanici_Click(object sender, ImageClickEventArgs e)
+        protected void btnBilgiGuncelle_Click(object sender, EventArgs e)
         {
 
         }

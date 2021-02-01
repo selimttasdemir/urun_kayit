@@ -154,6 +154,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="handler.ashx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="kullaniciSayfasi.aspx" />
     <Content Include="listele.aspx" />
     <Content Include="login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -192,6 +193,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adminGiris.aspx.cs">
@@ -236,6 +238,13 @@
     </Compile>
     <Compile Include="handler.ashx.cs">
       <DependentUpon>handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="kullaniciSayfasi.aspx.cs">
+      <DependentUpon>kullaniciSayfasi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kullaniciSayfasi.aspx.designer.cs">
+      <DependentUpon>kullaniciSayfasi.aspx</DependentUpon>
     </Compile>
     <Compile Include="listele.aspx.cs">
       <DependentUpon>listele.aspx</DependentUpon>

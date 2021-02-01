@@ -1,10 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="urun_kayit.SiteMaster" %>
 
 <!DOCTYPE html>
-
 <html lang="tr">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - ŞekilŞukul.com</title>
@@ -12,7 +11,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -54,19 +53,162 @@
                         <li><a runat="server" href="~/Contact">İletişim</a></li>
                         <li><a runat="server" href="~/adminGiris">Admin</a></li>
                         <li><a runat="server" href="~/login">Giriş Yap / Üye Ol</a></li>
+                        <asp:ImageButton ID="ibtnKullanici" href="~/kullaniciSayfasi" runat="server" OnClick="ibtnKullanici_Click" />
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer style="position: fixed;bottom: 0;text-align:center;margin-top:1024px;width:100%;padding:15px;height:50px">
-                <p>by Selim_TASDEMIR  &copy; <%: DateTime.Now.Year %> - ASP.NET APPLICATION</p>
-            </footer>
         </div>
 
     </form>
+
+    <style>
+        .footer-caner4 {
+            background-color: #292c2f;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.12);
+            box-sizing: border-box;
+            width: 100%;
+            font: bold 16px sans-serif;
+            text-align: left;
+            padding: 50px 60px;
+            margin-top: 80px;
+            overflow: hidden
+        }
+
+            .footer-caner4 .footer-left {
+                float: left
+            }
+
+            .footer-caner4 .footer-links {
+                color: #fff;
+                margin: 0 0 10px;
+                padding: 0
+            }
+
+                .footer-caner4 .footer-links a {
+                    display: inline-block;
+                    line-height: 1.8;
+                    text-decoration: none;
+                    color: inherit
+                }
+
+            .footer-caner4 .footer-canerhh4 {
+                color: #8f9296;
+                font-size: 14px;
+                font-weight: 400;
+                margin: 0
+            }
+
+            .footer-caner4 .footer-right {
+                float: right
+            }
+
+            .footer-caner4 form {
+                position: relative
+            }
+
+                .footer-caner4 form input {
+                    display: block;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    background-color: #1f2022;
+                    box-shadow: 0 1px 0 0 rgba(255,255,255,0.1);
+                    border: none;
+                    font: inherit;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #d1d2d2;
+                    width: 500px;
+                    padding: 18px 50px 18px 18px
+                }
+
+                    .footer-caner4 form input:focus {
+                        outline: none
+                    }
+
+                    .footer-caner4 form input::-webkit-input-placeholder {
+                        color: #5c666b
+                    }
+
+                    .footer-caner4 form input::-moz-placeholder {
+                        opacity: 1;
+                        color: #5c666b
+                    }
+
+                    .footer-caner4 form input:-ms-input-placeholder {
+                        color: #5c666b
+                    }
+
+                .footer-caner4 form i {
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 16px;
+                    right: 18px;
+                    color: #d1d2d2;
+                    font-size: 18px
+                }
+
+        @media (max-width: 1000px) {
+            .footer-caner4 form input {
+                width: 300px
+            }
+        }
+
+        @media (max-width: 800px) {
+            .footer-caner4 {
+                padding: 30px;
+                text-align: center;
+                font: bold 14px sans-serif
+            }
+
+                .footer-caner4 .footer-canerhh4 {
+                    margin-top: 10px;
+                    font-size: 12px
+                }
+
+                .footer-caner4 .footer-left, .footer-caner4 .footer-right {
+                    float: none;
+                    max-width: 300px;
+                    margin: 0 auto
+                }
+
+                .footer-caner4 .footer-left {
+                    margin-bottom: 20px
+                }
+
+                .footer-caner4 form input {
+                    width: 100%
+                }
+        }
+    </style>
+
+    <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                </asp:SiteMapPath>
+
+    <footer class="footer-caner4">
+        <div class="footer-left">
+            <p class="footer-links">
+                <a href="listele.aspx">Ana Sayfa</a>
+                ·
+                <a href="About.aspx">Hakkımızda</a>
+                ·
+                <a href="About.aspx">S.S.S</a>
+                ·
+                <a href="Contact.aspx">İletişim</a>
+            </p>
+            <p class="footer-canerhh4">© 2021 Tüm Hakları Saklıdır. www.sekilsukul.com</p>
+        </div>
+        <div class="footer-right">
+            <form method="get" action="#">
+                <input placeholder="Sitede arayın.." name="search" />
+                <i class="fa fa-search"></i>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>

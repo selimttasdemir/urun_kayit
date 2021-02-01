@@ -23,7 +23,6 @@ namespace urun_kayit
             //}
         }
         string kullaniciad, kullanicisifre, Mkullaniciad, Mkullanicisifre, MkullaniciMail, sorgu;
-
         protected void btnKayit_Click1(object sender, EventArgs e)
         {
             Mkullaniciad = txtKayitAd.Text;
@@ -54,16 +53,9 @@ namespace urun_kayit
             {
                 lblKayitDurum.Text = "Başarısız Kayıt !";
             }
-
-
-
-            
         }
-
         protected void btnGiris_Click1(object sender, EventArgs e)
         {
-            //baglanti.ConnectionString = "Server=.;Database=urunKayitListeleme;Integrated Security = True";
-
             kullaniciad = txtKullanici.Text;
             kullanicisifre = txtSifre.Text;
             SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
