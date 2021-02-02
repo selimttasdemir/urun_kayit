@@ -66,11 +66,13 @@
                         <br />
                         <asp:TextBox ID="txtTelNo" runat="server" Height="25px" Width="180px" placeholder="Telfn Numaranızı Giriniz ..." TextMode="Phone" CssClass="numericOnly"></asp:TextBox>
                         <br />
-                        <asp:TextBox ID="txtMail" runat="server" Height="25px" Width="180px" placeholder="E-Mail Giriniz ..." TextMode="Email"></asp:TextBox>
+                        <asp:TextBox ID="txtMail" runat="server" Height="25px" Width="180px" placeholder="E-Mail Giriniz ..." TextMode="Email" Enabled="False"></asp:TextBox>
                         <br />
                         <asp:TextBox ID="txtTarih" runat="server" Height="25px" Width="180px" placeholder="Doğum Tarihinizi Giriniz ..." TextMode="Date"></asp:TextBox>
                         <br />
                         <asp:Button ID="btnBilgiGuncelle" CssClass="button" runat="server" Height="48px" Text="Güncelle" Width="180px" OnClick="btnBilgiGuncelle_Click" />
+                        <br />
+                        <asp:Button ID="btnCikis" runat="server" CssClass="button" Height="48px" Text="Çıkış" Width="125px" OnClick="btnCikis_Click" />
                         <br />
                         <asp:Label ID="lblDurum" runat="server"></asp:Label>
                     </div>

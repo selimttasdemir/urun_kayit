@@ -17,9 +17,17 @@ namespace urun_kayit
         DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["kullanici"] != null)
+            if (Session["kullanici"] != null)
+            {
+                Response.Write("Hoşgeldin " + Session["kullanici"]);
+                //Wait for 5 seconds
+                System.Threading.Thread.Sleep(5000);
+                Response.Redirect("./kullaniciSayfasi.aspx");
+            }
+            //else
             //{
-            //    Response.Write("Hoşgeldin " + Session["kullanici"]);
+            //    System.Threading.Thread.Sleep(5000);
+            //    Response.Redirect("./login.aspx");
             //}
         }
         string kullaniciad, kullanicisifre, Mkullaniciad, Mkullanicisifre, MkullaniciMail, sorgu;
@@ -56,26 +64,35 @@ namespace urun_kayit
         }
         protected void btnGiris_Click1(object sender, EventArgs e)
         {
-            kullaniciad = txtKullanici.Text;
-            kullanicisifre = txtSifre.Text;
-            SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
-            SqlCommand komut = new SqlCommand();
-            string sorgu0 = "Select * from tblMusteri where musteriUser=@kadi AND musteriPasswd=@sifre";
-            komut = new SqlCommand(sorgu0, baglanti);
-            komut.Parameters.AddWithValue("@kadi", kullaniciad);
-            komut.Parameters.AddWithValue("@sifre", kullanicisifre);
-            baglanti.Open();
-            SqlDataReader oku = komut.ExecuteReader();
-            if (oku.Read())
+            try
             {
-                Session.Add("kullanici", kullaniciad);
-                Response.Redirect("listele.aspx");
+                kullaniciad = txtKullanici.Text;
+                kullanicisifre = txtSifre.Text;
+                SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
+                SqlCommand komut = new SqlCommand();
+                string sorgu0 = "Select * from tblMusteri where musteriUser=@kadi AND musteriPasswd=@sifre";
+                komut = new SqlCommand(sorgu0, baglanti);
+                komut.Parameters.AddWithValue("@kadi", kullaniciad);
+                komut.Parameters.AddWithValue("@sifre", kullanicisifre);
+                baglanti.Open();
+                SqlDataReader oku = komut.ExecuteReader();
+                if (oku.Read())
+                {
+                    Session.Add("kullanici", kullaniciad);
+                    Session.Add("psw", kullanicisifre);
+                    Response.Redirect("listele.aspx");
+                }
+                else
+                {
+                    lblGirisDurum.Text = "Giriş Başarısız!";
+                }
+                baglanti.Close();
             }
-            else
+            catch (Exception)
             {
-                lblGirisDurum.Text = "Giriş Başarısız";
+
+                lblGirisDurum.Text = "Giriş Başarısız!";
             }
-            baglanti.Close();
         }
     }
 }

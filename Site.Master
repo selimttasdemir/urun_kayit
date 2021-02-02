@@ -53,7 +53,7 @@
                         <li><a runat="server" href="~/Contact">İletişim</a></li>
                         <li><a runat="server" href="~/adminGiris">Admin</a></li>
                         <li><a runat="server" href="~/login">Giriş Yap / Üye Ol</a></li>
-                        <asp:ImageButton ID="ibtnKullanici" href="~/kullaniciSayfasi" runat="server" OnClick="ibtnKullanici_Click" />
+                        <li><a runat="server" href="~/kullaniciSayfasi">Profilim</a></li>
                     </ul>
                 </div>
             </div>
