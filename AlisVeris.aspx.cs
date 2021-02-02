@@ -10,7 +10,6 @@ namespace urun_kayit
 {
     public partial class AlisVeris : System.Web.UI.Page
     {
-
         SqlConnection baglanti;
         SqlCommand cmd;
         SqlDataReader dr;
@@ -33,7 +32,6 @@ namespace urun_kayit
                 SepetGetir();// sepetin son halini birdaha ekrana getiriyoruz
             }
         }
-
         public void Ekle(string id, string isim, int adet, double fiyat)
         {
             try
@@ -51,13 +49,11 @@ namespace urun_kayit
                     dt.Columns.Add("adet");//DataTableye adet colonunu ekliyoruz
                     dt.Columns.Add("tutar");//DataTableye tutar colonunu ekliyoruz
                 }
-
                 bool varmi = Kontrol(id.ToString());//Kontrol adındaki methoda gelen id  değerini gönderiyoruz
                                                     // böylece aynı id ye sahip ürün daha önce eklendiyse aynı ürünü birdaha eklemek yerine sadece ürünnün sepeteki adetini artıracağız
                                                     // Kontrol methodu ürün varsa true yoks false değer döndürüyor
                 if (varmi == false)//ürün daha önce eklenmemiş ise            
                 {
-
                     DataRow drow = dt.NewRow();//yeni bir row (satır) oluşturuluyor.
                     drow["id"] = id;//satırın id colonuna gelen id yazılıyor.
                     drow["isim"] = isim;//satırın isim colonuna gelen isim yazılıyor.
@@ -66,7 +62,6 @@ namespace urun_kayit
                     drow["tutar"] = (fiyat * adet).ToString();//satırın tutar alanına gelen fiyat ile adet çarpımı  yazılıyor.
                     dt.Rows.Add(drow);//oluşturulan satır tabloya ekleniyor. 
                 }
-
                 else//eğer ürün tabloya daha önce eklenmiş ise
                 {
                     Artir(id, adet, fiyat);//Artir methoduna gelen id fiyat ve adet değerleri gönderiliyor. 
@@ -76,8 +71,8 @@ namespace urun_kayit
             }
             catch
             {
-            }
 
+            }
         }
         public double SepetToplam()
         {
@@ -92,7 +87,6 @@ namespace urun_kayit
                 }
             }
             return toplam; //toplam değeri döndürülüyor.
-
         }
         public void Sil(string id)//silinecek olan ürünün id değeri alınıyor
         {
@@ -129,7 +123,6 @@ namespace urun_kayit
                 }
             }
             return r;//geri değer dönürülüyor ürün varsa true yoksa false dönecek
-
         }
         private void Artir(string id, int adet, double fiyat)//değerler alınıyor
         {
@@ -154,11 +147,9 @@ namespace urun_kayit
             }
             catch
             {
+
             }
         }
-
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
             SepetGetir();
@@ -170,23 +161,19 @@ namespace urun_kayit
                 cmd.Connection = baglanti;
                 cmd.CommandText = ("Select * From Urunler");
                 dr = cmd.ExecuteReader();
-
                 while (dr.Read())
                 {
                     DropDownList1.Items.Add(Convert.ToString(dr["UrunId"]));
                 }
                 baglanti.Close();
             }
-
             catch
             {
                 Response.Write("Lütfen Girdiğiniz Değerleri Kontrol Ediniz..." + " Sorunun düzelmemesi halinde IT Departmanına bildiriniz.");
             }
         }
-
         protected void btnSepeteEkle_Click(object sender, EventArgs e)
         {
-
             if (txtAdet.Text != "" && txtAdi.Text != "" && txtFiyat.Text != "")
             {
                 Ekle(DropDownList1.Text.ToString(), txtAdi.Text, Convert.ToInt32(txtAdet.Text), Convert.ToDouble(txtFiyat.Text));
@@ -198,14 +185,12 @@ namespace urun_kayit
         }
         protected void btnGoster_Click(object sender, EventArgs e)
         {
-
             try
             {
                 baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
                 SqlCommand cmd = new SqlCommand("Select UrunAd,Fiyat from Urunler where urunId=" + Convert.ToInt32(DropDownList1.SelectedItem.Text) + "", baglanti);
                 baglanti.Open();
                 //cmd.CommandText = ("Select * From UrunBilgisi");
-
                 cmd.Connection = baglanti;
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -215,14 +200,11 @@ namespace urun_kayit
                 }
                 baglanti.Close();
             }
-
             catch
             {
                 Response.Write("Lütfen Girdiğiniz Değerleri Kontrol Ediniz..." +
                 "Sorunun düzelmemesi halinde IT Departmanına bildiriniz.");
-
             }
-
         }
     }
 }

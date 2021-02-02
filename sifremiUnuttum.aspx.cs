@@ -11,17 +11,11 @@ namespace urun_kayit
 {
     public partial class sifremiUnuttum : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         string sorgu, kullaniciMail, kullaniciNumara;
         protected void btnSifreYenile_Click1(object sender, EventArgs e)
         {
             kullaniciMail = txtSifremiUnuttumMail.Text;
             kullaniciNumara = txtSifremiUnuttumTelNo.Text;
-
             if (kullaniciMail != "" && kullaniciNumara != "")
             {
                 SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
@@ -55,8 +49,6 @@ namespace urun_kayit
             {
                 lblinfo.Text = "Girdiler Boş Geçilemez !";
             }
-            
         }
-        
     }
 }

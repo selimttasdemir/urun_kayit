@@ -20,10 +20,8 @@ namespace urun_kayit
             else
             {
                 Response.Redirect("login.aspx");
-
             }
         }
-
         protected void btnBilgiGuncelle_Click(object sender, EventArgs e)
         {
             try
@@ -38,7 +36,6 @@ namespace urun_kayit
                 komut.Parameters.AddWithValue("@tarih", txtTarih.Text);
                 komut.Parameters.AddWithValue("@musteriUser", txtMail.Text);
                 komut.ExecuteNonQuery();
-
                 SqlDataAdapter da = new SqlDataAdapter(komut);
                 SqlDataReader dr = komut.ExecuteReader();
                 while (true)
@@ -56,16 +53,13 @@ namespace urun_kayit
             {
                 lblDurum.Text = "Güncelleme Başarısız... Hatanın Devam Etmesi Durumunda BT Departmanına Bildiriniz !";
             }
-
         }
-
         protected void btnSifreGuncelle_Click(object sender, EventArgs e)
         {
             try
             {
                 if (txtSifre.Text != "" && txtYeniSifre1.Text != "" && txtYeniSifre2.Text != "")
                 {
-
                     if (txtSifre.Text == Session["psw"].ToString())
                     {
                         SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
@@ -75,7 +69,6 @@ namespace urun_kayit
                         komut.Parameters.AddWithValue("@sifre", txtYeniSifre1.Text);
                         komut.Parameters.AddWithValue("@musteriUser", txtMail.Text);
                         komut.ExecuteNonQuery();
-
                         SqlDataAdapter da = new SqlDataAdapter(komut);
                         SqlDataReader dr = komut.ExecuteReader();
                         while (true)
@@ -101,11 +94,9 @@ namespace urun_kayit
             }
             catch (Exception)
             {
-
                 lblSifreDegistir.Text = "Kutular Boş Bırakılamaz.\n Şifre Değştirme Başarısız ..!";
             }
         }
-
         protected void btnCikis_Click(object sender, EventArgs e)
         {
             if (Session["kullanici"] != null)
@@ -116,7 +107,6 @@ namespace urun_kayit
             else
             {
                 Response.Redirect("login.aspx");
-
             }
         }
     }

@@ -11,19 +11,6 @@ namespace urun_kayit
     public partial class adminGiris : System.Web.UI.Page
     {
         string kullaniciad, kullanicisifre;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            //if (Session["kullanici"] != null)
-            //{
-            //    Response.Write("Hoşgeldin " + Session["kullanici"]);
-            //}
-            //else
-            //{
-            //    Response.Redirect("adminGiris.aspx");
-            //}
-
-        }
-
         protected void btnAdminGiris_Click(object sender, EventArgs e)
         {
             kullaniciad = txtUserName.Text;
@@ -47,7 +34,6 @@ namespace urun_kayit
             }
             baglanti.Close();
         }
-
         // "SELECT * FROM tblPersonel WHERE KULLANICIADI=@user AND SIFRE=@pass"
 
         //baglanti.ConnectionString = "Server=.;Database=urunKayitListeleme;Integrated Security = True";

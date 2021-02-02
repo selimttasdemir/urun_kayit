@@ -10,10 +10,6 @@ namespace urun_kayit
 {
     public partial class SifreYenile : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
         string sorgu;
         protected void btnSifreYenile_Click(object sender, EventArgs e)
         {
@@ -24,7 +20,6 @@ namespace urun_kayit
             komut.Parameters.AddWithValue("@sifre", txtYeniSifre.Text);
             komut.Parameters.AddWithValue("@musteriNumara", Session["numara"].ToString());
             komut.ExecuteNonQuery();
-
             SqlDataAdapter da = new SqlDataAdapter(komut);
             SqlDataReader dr = komut.ExecuteReader();
             while (true)
@@ -33,9 +28,8 @@ namespace urun_kayit
                 break;
             }
             baglanti.Close();
-
             //Wait for 5 seconds
-            System.Threading.Thread.Sleep(5000);
+            System.Threading.Thread.Sleep(3000);
             Response.Redirect("login.aspx");
         }
     }
