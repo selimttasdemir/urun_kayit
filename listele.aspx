@@ -35,7 +35,7 @@
             </table>
                <br />
                
-    <asp:Button ID="btnAlisveris" runat="server" Height="50px" OnClick="btnAlisveris_Click" style="border-radius:20px;border:1px solid #FF4B2B;background-color:#e45f56;color:#fff;font-size:12px;font-weight:bold;padding:12px 45px;letter-spacing: 1px;text-transform: uppercase;transition: transform 80ms ease-in" Text="Alışverişe Başla" Width="225px" />
+    <asp:Button ID="btnAlisveris" runat="server" Height="45px" OnClick="btnAlisveris_Click" style="border-radius:20px;border:1px solid #FF4B2B;background-color:#e45f56;color:#fff;font-size:12px;font-weight:bold;padding:12px 45px;letter-spacing: 1px;text-transform: uppercase;transition: transform 80ms ease-in" Text="Alışverişe Başla" Width="205px" />
     
            </div>
     </center>

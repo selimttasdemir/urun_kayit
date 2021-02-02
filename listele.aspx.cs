@@ -18,33 +18,6 @@ namespace urun_kayit
             try
             {
                 baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
-                cmd = new SqlCommand();
-                baglanti.Open();
-                cmd.Connection = baglanti;
-                cmd.CommandText = ("Select * From Urunler");
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    DropDownList1.Items.Add(Convert.ToString(dr["UrunId"]));
-                }
-                baglanti.Close();
-            }
-            catch
-            {
-                Response.Write("Lütfen Girdiğiniz Değerleri Kontrol Ediniz..." +
-                    "Sorunun düzelmemesi halinde IT Departmanına bildiriniz.");
-                //File.Delete(Server.MapPath("~/Resimler2/" + filename));
-            }
-        }
-        protected void btnAlisveris_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AlisVeris.aspx");
-        }
-        protected void btnlistele_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
                 SqlCommand cmd = new SqlCommand("Select AnaKategori,AltKategori,UrunAd,Fiyat,Agirlik,GonderilenSehir,AliciNumara  from Urunler where UrunId=" + Convert.ToInt32(DropDownList1.SelectedItem.Text) + "", baglanti);
                 baglanti.Open();
                 //cmd.CommandText = ("Select * From UrunBilgisi");
@@ -67,6 +40,47 @@ namespace urun_kayit
                 Response.Write("Lütfen Girdiğiniz Değerleri Kontrol Ediniz..." +
                 "Sorunun düzelmemesi halinde IT Departmanına bildiriniz.");
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //try
+            //{
+            //    baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
+            //    cmd = new SqlCommand();
+            //    baglanti.Open();
+            //    cmd.Connection = baglanti;
+            //    cmd.CommandText = ("Select * From Urunler");
+            //    dr = cmd.ExecuteReader();
+            //    while (dr.Read())
+            //    {
+            //        DropDownList1.Items.Add(Convert.ToString(dr["UrunId"]));
+            //    }
+            //    baglanti.Close();
+            //}
+            //catch
+            //{
+            //    Response.Write("Lütfen Girdiğiniz Değerleri Kontrol Ediniz..." +
+            //        "Sorunun düzelmemesi halinde IT Departmanına bildiriniz.");
+            //    //File.Delete(Server.MapPath("~/Resimler2/" + filename));
+            //}
+        }
+        protected void btnAlisveris_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AlisVeris.aspx");
+        }
+        protected void btnlistele_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
