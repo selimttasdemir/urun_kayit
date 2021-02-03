@@ -2,41 +2,38 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <center>
-           <div style="background-color:#7accc8">
-                <p>
-            &nbsp;</p>
-                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style2" Width="250px"></asp:DropDownList>
-                <asp:Button ID="btnlistele" runat="server" OnClick="btnlistele_Click" Text="Listele" />
-            <table style="width: 1200px; height: 200px;">
-            <tr>
-            <td style="width: 999px; height: 200px;">
-            <table style="width: 1182px; height: 211px;">
-            <tr>
-            <td class="tablo1" aria-expanded="undefined" style="width: 170px">
-                <textarea id="TextArea1" runat="server" cols="20" name="S1" rows="2" style="width: 100px; height: 100px"></textarea></td>
-            <td class="tablo1" style="width: 170px">  
-                <textarea id="TextArea2" runat="server" cols="20" name="S2" rows="2" style="width: 100px; height: 100px"></textarea></td>
-            <td class="tablo1" style="width: 170px">
-                <textarea id="TextArea3" runat="server" cols="20" name="S3" rows="2" style="width: 100px; height: 100px"></textarea></td>
-            <td class="tablo1" style="width: 170px">  
-                <textarea id="TextArea4" runat="server" cols="20" name="S4" rows="2" style="width: 100px; height: 100px"></textarea></td>
-            <td class="tablo1" style="width: 170px">
-                <textarea id="TextArea5" runat="server" cols="20" name="S5" rows="2" style="width: 100px; height: 100px"></textarea></td>
-            <td class="tablo1" style="width: 170px">  
-                <textarea id="TextArea6" runat="server" cols="20" name="S6" rows="2" style="width: 100px; height: 100px"></textarea></td>
-            <td class="tablo1">
-                <textarea id="TextArea7" runat="server" cols="20" name="S7" rows="2" style="width: 100px; height: 100px"></textarea></td>
-            </tr>
+    <!--Repeater örneğimizde her kaydı bir tablo satırı olarak tekrar ettiriyoruz.
+  Bunun için başlık olarak kullanılmak üzere Repeater kontrolü tanımlamasından önce
+  bir HTML tablosu ve satırı tanımlıyoruz...-->
 
-            </table>
-            </td>
-            </tr>
-            </table>
-               <br />
-               
-    <asp:Button ID="btnAlisveris" runat="server" Height="45px" OnClick="btnAlisveris_Click" style="border-radius:20px;border:1px solid #FF4B2B;background-color:#e45f56;color:#fff;font-size:12px;font-weight:bold;padding:12px 45px;letter-spacing: 1px;text-transform: uppercase;transition: transform 80ms ease-in" Text="Alışverişe Başla" Width="205px" />
-    
-           </div>
-    </center>
+
+    <table border="1" style="width: 1180px">
+        <tr style="font-family: 'Bauhaus 93'; font-size: 24px; text-align: center; width: 150px">
+            <td style="width: 150px; height: 150px">Resim</td>
+            <td>Ana Kategori</td>
+            <td>Alt Kategori</td>
+            <td>Ürün Adı</td>
+            <td>Fiyat</td>
+        </tr>
+
+        <asp:Repeater ID="rptListe" runat="server">
+
+            <ItemTemplate>
+                <tr style="height: 150px; width: 100%; text-align: center; font-family: 'Arial Rounded MT'">
+                    <!--Repeater kontrolü sırayla kendisine yüklenen bütün kayıtlara konumlanarak,
+             her bir kayıt için buradaki şablonu tekrar eder. Bu arada alan adlarını bir yere
+             yazdırmak gerektiğinde aşağıdaki kod bloğu içindeki form kullanılır (Küçük ve
+             yüzde işaretleri arasındaki bölüm). -->
+                    <td>
+                        <img src="foto/<%# Eval("Image") %>" />
+                    </td>
+                    <td><%# DataBinder.Eval(Container.DataItem, "AnaKategori") %></td>
+                    <td><%# DataBinder.Eval(Container.DataItem, "AltKategori") %></td>
+                    <td><%# DataBinder.Eval(Container.DataItem, "UrunAd") %></td>
+                    <td><%# DataBinder.Eval(Container.DataItem, "Fiyat") %> TL </td>
+                </tr>
+            </ItemTemplate>
+        </asp:Repeater>
+
+    </table>
 </asp:Content>
