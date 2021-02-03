@@ -7,7 +7,7 @@
   bir HTML tablosu ve satırı tanımlıyoruz...-->
 
 
-    <table border="1" style="width: 1180px">
+    <table border="1" style="width: 1180px;">
         <tr style="font-family: 'Bauhaus 93'; font-size: 24px; text-align: center; width: 150px">
             <td style="width: 150px; height: 150px">Resim</td>
             <td>Ana Kategori</td>
