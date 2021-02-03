@@ -175,7 +175,6 @@
     <Content Include="SifreYenile.aspx" />
     <Content Include="Site.Master" />
     <Content Include="urunEkleme.aspx" />
-    <Content Include="urunler.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -274,13 +273,6 @@
     </Compile>
     <Compile Include="urunEkleme.aspx.designer.cs">
       <DependentUpon>urunEkleme.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="urunler.aspx.cs">
-      <DependentUpon>urunler.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="urunler.aspx.designer.cs">
-      <DependentUpon>urunler.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

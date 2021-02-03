@@ -43,13 +43,11 @@ namespace urun_kayit
 
         }
 
-
-        protected void btnAlisveris_Click(object sender, EventArgs e)
+        protected void btnSepeteEkle_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AlisVeris.aspx");
-        }
-        protected void btnlistele_Click(object sender, EventArgs e)
-        {
+            SqlConnection baglanti = new SqlConnection("Server=.;Database=urunKayitListeleme;Integrated Security = True");
+            string sorgu = "Insert into tblSepet ";
+            SqlCommand komut = new SqlCommand(sorgu, baglanti);
 
         }
     }

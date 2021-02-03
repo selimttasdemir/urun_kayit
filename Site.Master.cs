@@ -13,10 +13,5 @@ namespace urun_kayit
         {
 
         }
-
-        protected void ibtnKullanici_Click(object sender, ImageClickEventArgs e)
-        {
-
-        }
     }
 }
