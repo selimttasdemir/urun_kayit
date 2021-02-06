@@ -55,7 +55,7 @@
                     </td>
                     <td>
                         <asp:Button ID="btnSepeteEkle" runat="server" Text="Sepete Ekle" OnClick="btnSepeteEkle_Click" Height="40px" Width="100px" />
-                        <asp:Button ID="btnGoster" runat="server" OnClick="btnGoster_Click" Text="Fiyat Gör" Height="40px" style="margin-bottom: 9" Width="100px" />
+                        <asp:Button ID="btnGoster" runat="server" OnClick="btnGoster_Click" Text="Fiyat Gör" Height="40px" Style="margin-bottom: 9" Width="100px" />
                     </td>
                 </tr>
             </table>

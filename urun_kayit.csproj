@@ -143,6 +143,7 @@
     <Content Include="kullaniciSayfasi.aspx" />
     <Content Include="listele.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="OdemeSayfasi.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -244,6 +245,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeSayfasi.aspx.cs">
+      <DependentUpon>OdemeSayfasi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OdemeSayfasi.aspx.designer.cs">
+      <DependentUpon>OdemeSayfasi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sifremiUnuttum.aspx.cs">

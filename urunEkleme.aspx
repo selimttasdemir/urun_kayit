@@ -51,9 +51,11 @@
                     <td>Ana Kategori:</td>
                     <td colspan="1" class="modal-sm" style="width: 295px">
                         <select name="anaKategori" id="anaKategori" class="auto-style1">
-                            <option value="Tıbbi Malzeme">Tıbbi Malzeme</option>
-                            <option value="Bilgisayar Donanım">Bilgisayar Donanım</option>
-                            <option value="Kırtasiye Malzemeleri">Kırtasiye Malzemeleri</option>
+                            <option value="Kaban">Kaban</option>
+                            <option value="Sweet">Sweet</option>
+                            <option value="T-Shirt">T-Shirt</option>
+                            <option value="Bere">Bere</option>
+
                         </select>
                         &nbsp;</td>
                 </tr>
@@ -62,8 +64,8 @@
                     <td class="auto-style2">Alt Kategori:</td>
                     <td colspan="1" class="auto-style3">
                         <select name="altKategori" id="altKategori" class="auto-style1">
-                            <option value="Elektronik">Elektronik</option>
-                            <option value="Mekanik">Mekanik</option>
+                            <option value="Erkek">Erkek</option>
+                            <option value="Kadın">Kadın</option>
                         </select></td>
                 </tr>
 
